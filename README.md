@@ -57,59 +57,6 @@ I am always excited to learn new technologies and collaborate on innovative soft
 
 ---
 
-# 📂 Featured Projects
-
-## 🎓 Smart Attendance System
-
-A modern AI-powered attendance management system built using Flutter, Node.js, Express.js and MySQL.
-
-### Features
-
-- Face Recognition
-- Live Face Detection
-- GPS Attendance
-- QR Attendance
-- Admin Dashboard
-- Student Dashboard
-- PDF Reports
-- Excel Reports
-- JWT Authentication
-- Location Verification
-
----
-
-## 🤖 AI Based User Credibility Evaluation
-
-Artificial Intelligence system for evaluating user credibility using Machine Learning techniques.
-
----
-
-## 🛡 AI Fraudulent Job Detection
-
-Machine Learning application for detecting fraudulent job postings.
-
----
-
-## 🌐 Personal Portfolio Website
-
-Modern responsive portfolio showcasing my projects, skills and experience.
-
-
----
-
-# 🌱 Currently Learning
-
-- Flutter
-- Artificial Intelligence
-- Machine Learning
-- Django
-- Node.js
-- Express.js
-- REST APIs
-- Cloud Deployment
-
----
-
 # 🎯 Career Objective
 
 To secure a challenging Software Developer position where I can contribute my technical skills, continue learning modern technologies, and build innovative software solutions that create real-world impact.
@@ -118,7 +65,7 @@ To secure a challenging Software Developer position where I can contribute my te
 
 # 📫 Connect With Me
 
-📧 Email: your-email@example.com
+📧 Email: singampallimanohar6@gmail.com
 
 💼 LinkedIn:
 https://www.linkedin.com/in/singampallimanohar
