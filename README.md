@@ -1,12 +1,7 @@
 # 👋 Hi, I'm Manohar Singampalli
 
-<div align="center">
 
 ### 🚀 Full Stack Developer | Flutter Developer | AI & Machine Learning Enthusiast
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=24&duration=3000&pause=1000&color=0A66C2&center=true&vCenter=true&width=700&lines=Full+Stack+Developer;Flutter+Developer;Python+%7C+Django+Developer;AI+%26+Machine+Learning+Enthusiast;Always+Learning+New+Technologies" />
-
-</div>
 
 ---
 
@@ -99,15 +94,6 @@ Machine Learning application for detecting fraudulent job postings.
 
 Modern responsive portfolio showcasing my projects, skills and experience.
 
----
-
-# 📊 GitHub Stats
-
-![](https://github-readme-stats.vercel.app/api?username=singampallimanohar&show_icons=true&theme=tokyonight)
-
-![](https://github-readme-streak-stats.herokuapp.com/?user=singampallimanohar&theme=tokyonight)
-
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=singampallimanohar&layout=compact&theme=tokyonight)
 
 ---
 
