@@ -142,11 +142,6 @@ https://github.com/singampallimanohar
 
 📍 Andhra Pradesh, India
 
----
-
-# 💡 Quote
-
-> "Code. Learn. Build. Improve. Repeat."
 
 ---
 
