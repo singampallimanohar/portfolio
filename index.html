@@ -7,12 +7,16 @@
   <meta name="keywords" content="Manohar Singampalli, Full Stack Developer, Flutter Developer, Python Django Developer, Portfolio, Software Developer India">
   <meta name="author" content="Manohar Singampalli">
   <title>Manohar Singampalli | Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="image/logo.png">
+  <link rel="apple-touch-icon" href="image/logo.png">
+  <link rel="shortcut icon" type="image/png" href="image/logo.png">
   
   <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-  
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
@@ -29,7 +33,7 @@
   <!-- Loading Screen -->
   <div id="loader" class="loader">
     <div class="loader-inner">
-      <div class="loader-logo"> Manohar</div>
+      <img src="image/logo.png" alt="Manohar Logo" class="loader-logo-img">
       <div class="loader-bar">
         <div class="loader-fill" id="loader-fill"></div>
       </div>
@@ -50,7 +54,9 @@
   <!-- Sticky Navbar -->
   <nav id="navbar" class="navbar">
     <div class="nav-container">
-      <a href="#home" class="nav-logo" id="nav-logo">MS </a>
+      <a href="#home" class="nav-logo" style="display: flex; align-items: center;">
+        <img src="image/logo.png" alt="Manohar Singampalli Logo" class="logo-img">
+      </a>
       <ul class="nav-links" id="nav-links">
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
@@ -60,18 +66,6 @@
         <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      
-      <div class="nav-actions">
-        <!-- Theme Switcher Button -->
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-          <i class="fas fa-moon moon-icon"></i>
-          <i class="fas fa-sun sun-icon"></i>
-        </button>
-        <!-- Hamburger Menu Button -->
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
   </nav>
 
@@ -108,31 +102,35 @@
             <div class="avatar-card" id="hero-avatar-card">
               <!-- Front Side: Image -->
               <div class="avatar-front">
-                <img src="image/image.png" alt="Manohar Singampalli" class="profile-img" onerror="this.src='https://picsum.photos/400/450';">
+                <img src="image/profile.png" alt="Manohar Singampalli" class="profile-img" onerror="this.src='https://picsum.photos/400/450';">
                 <div class="avatar-overlay">
                   <h3>Manohar Singampalli</h3>
                   <p>Tap to view code <i class="fas fa-sync-alt"></i></p>
                 </div>
               </div>
-              <!-- Back Side: Code Editor -->
+             <!-- Back Side: Code Editor -->
               <div class="avatar-back">
                 <div class="code-editor-header">
-                  <span class="editor-dot red"></span>
-                  <span class="editor-dot yellow"></span>
-                  <span class="editor-dot green"></span>
-                  <span class="editor-title">developer.py</span>
+                  <div class="editor-dot red"></div>
+                  <div class="editor-dot yellow"></div>
+                  <div class="editor-dot green"></div>
+                  <div class="editor-title">developer.dart</div>
                 </div>
                 <div class="code-editor-body">
-                  <pre><code><span class="code-keyword">class</span> <span class="code-class">Developer</span>:
-    <span class="code-keyword">def</span> <span class="code-method">__init__</span>(<span class="code-self">self</span>):
-        <span class="code-self">self</span>.name = <span class="code-string">"Manohar S."</span>
-        <span class="code-self">self</span>.role = [
-            <span class="code-string">"Full Stack"</span>,
-            <span class="code-string">"Flutter"</span>
-        ]
-        <span class="code-self">self</span>.motto = <span class="code-string">"Create & Innovate"</span>
-        <span class="code-self">self</span>.location = <span class="code-string">"AP, India"</span>
-        <span class="code-self">self</span>.status = <span class="code-string">"Open to Work"</span></code></pre>
+<pre>
+<span class="code-keyword">class</span> <span class="code-class">Developer</span> {
+  <span class="code-keyword">String</span> name = <span class="code-string">"Manohar"</span>;
+  <span class="code-keyword">List</span>&lt;<span class="code-keyword">String</span>&gt; skills = [
+    <span class="code-string">"Flutter"</span>, <span class="code-string">"Python"</span>,
+    <span class="code-string">"JavaScript"</span>, <span class="code-string">"React"</span>
+  ];
+  
+  <span class="code-keyword">void</span> <span class="code-method">buildAmazingThings</span>() {
+    <span class="code-self">this</span>.<span class="code-method">code</span>();
+    <span class="code-self">this</span>.<span class="code-method">deploy</span>();
+  }
+}
+</pre>
                 </div>
               </div>
             </div>
@@ -467,111 +465,120 @@
       
       <!-- Projects Grid -->
       <div class="projects-grid reveal">
-        
-        <!-- Project 1: Smart Attendance System -->
+
+        <!-- Project 1 -->
         <div class="project-card" data-category="mobile ai-ml">
-          <div class="project-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?q=80&w=600&auto=format&fit=crop" alt="Smart Attendance System" loading="lazy" class="project-img">
-            <div class="project-badge">Mobile / AI</div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-card-title">Smart Attendance System</h3>
-            <p class="project-desc">A mobile app that replaces registers by verifying students via face recognition models and recording timestamps dynamically.</p>
-            <div class="project-tech-tags">
-              <span>Flutter</span>
-              <span>Firebase</span>
-              <span>Face Recognition</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com/" target="_blank" class="project-btn outline"><i class="fab fa-github"></i> Source</a>
-              <a href="#" class="project-btn fill"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?q=80&w=700&auto=format&fit=crop" alt="Smart Attendance System" loading="lazy" class="project-img">
+          <div class="project-glass-overlay">
+            <div class="project-content-bottom">
+              <h3 class="project-card-title">Smart Attendance System</h3>
+              <div class="project-tech-tags">
+                <span class="tag-flutter">Flutter</span>
+                <span class="tag-firebase">Firebase</span>
+                <span class="tag-ai">Face Recognition</span>
+              </div>
+              <div class="project-hover-reveal">
+                <p class="project-desc">A mobile app that replaces registers by verifying students via face recognition and recording timestamps dynamically in real-time.</p>
+                <div class="project-actions">
+                  <a href="https://github.com/singampallimanohar/" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+                  <a href="#" class="btn-live">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        
-        <!-- Project 2: AI Chatbot -->
+
+        <!-- Project 2 -->
         <div class="project-card" data-category="web ai-ml">
-          <div class="project-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?q=80&w=600&auto=format&fit=crop" alt="AI Chatbot" loading="lazy" class="project-img">
-            <div class="project-badge">Web / AI</div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-card-title">AI Chatbot</h3>
-            <p class="project-desc">Intelligent chat assistant powered by Python and Django backend. Handles user inquiries and processes language patterns dynamically.</p>
-            <div class="project-tech-tags">
-              <span>Python</span>
-              <span>Django</span>
-              <span>NLP API</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com/" target="_blank" class="project-btn outline"><i class="fab fa-github"></i> Source</a>
-              <a href="#" class="project-btn fill"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3: Portfolio Website -->
-        <div class="project-card" data-category="web">
-          <div class="project-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" alt="Portfolio Website" loading="lazy" class="project-img">
-            <div class="project-badge">Web App</div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-card-title">Premium Portfolio Website</h3>
-            <p class="project-desc">This premium portfolio website utilizing sleek CSS grid architecture, custom canvas particle simulations, and dark/light switching.</p>
-            <div class="project-tech-tags">
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JavaScript</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com/" target="_blank" class="project-btn outline"><i class="fab fa-github"></i> Source</a>
-              <a href="#" class="project-btn fill"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <img src="https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?q=80&w=700&auto=format&fit=crop" alt="AI Chatbot" loading="lazy" class="project-img">
+          <div class="project-glass-overlay">
+            <div class="project-content-bottom">
+              <h3 class="project-card-title">AI Chatbot</h3>
+              <div class="project-tech-tags">
+                <span class="tag-python">Python</span>
+                <span class="tag-django">Django</span>
+                <span class="tag-ai">NLP API</span>
+              </div>
+              <div class="project-hover-reveal">
+                <p class="project-desc">Intelligent chat assistant powered by Python and Django. Handles user inquiries and processes language patterns with NLP.</p>
+                <div class="project-actions">
+                  <a href="https://github.com/singampallimanohar/" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+                  <a href="#" class="btn-live">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Project 4: Weather App -->
+        <!-- Project 3 -->
         <div class="project-card" data-category="web">
-          <div class="project-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=600&auto=format&fit=crop" alt="Weather App" loading="lazy" class="project-img">
-            <div class="project-badge">Web App</div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-card-title">Weather Forecast App</h3>
-            <p class="project-desc">Retrieves worldwide meteorological stats dynamically through external REST APIs. Features visual indicators and responsive interfaces.</p>
-            <div class="project-tech-tags">
-              <span>JavaScript</span>
-              <span>Weather API</span>
-              <span>CSS Grid</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com/" target="_blank" class="project-btn outline"><i class="fab fa-github"></i> Source</a>
-              <a href="#" class="project-btn fill"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=700&auto=format&fit=crop" alt="Portfolio Website" loading="lazy" class="project-img">
+          <div class="project-glass-overlay">
+            <div class="project-content-bottom">
+              <h3 class="project-card-title">Premium Portfolio Website</h3>
+              <div class="project-tech-tags">
+                <span class="tag-html">HTML5</span>
+                <span class="tag-css">CSS3</span>
+                <span class="tag-js">JavaScript</span>
+              </div>
+              <div class="project-hover-reveal">
+                <p class="project-desc">This premium portfolio using sleek CSS grid architecture, canvas particle simulations, and seamless dark/light mode switching.</p>
+                <div class="project-actions">
+                  <a href="https://github.com/singampallimanohar/" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+                  <a href="https://singampallimanohar.netlify.app" target="_blank" class="btn-live">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Project 5: Task Management System -->
+        <!-- Project 4 -->
         <div class="project-card" data-category="web">
-          <div class="project-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=600&auto=format&fit=crop" alt="Task Management System" loading="lazy" class="project-img">
-            <div class="project-badge">Web App</div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-card-title">Task Management System</h3>
-            <p class="project-desc">A complete organizer workspace designed for teams. Includes task assignments, deadlines tracking, status tagging, and authorization.</p>
-            <div class="project-tech-tags">
-              <span>Django</span>
-              <span>Python</span>
-              <span>SQL</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com/" target="_blank" class="project-btn outline"><i class="fab fa-github"></i> Source</a>
-              <a href="#" class="project-btn fill"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=700&auto=format&fit=crop" alt="Weather App" loading="lazy" class="project-img">
+          <div class="project-glass-overlay">
+            <div class="project-content-bottom">
+              <h3 class="project-card-title">Weather Forecast App</h3>
+              <div class="project-tech-tags">
+                <span class="tag-js">JavaScript</span>
+                <span class="tag-api">Weather API</span>
+                <span class="tag-css">CSS Grid</span>
+              </div>
+              <div class="project-hover-reveal">
+                <p class="project-desc">Retrieves worldwide meteorological data via REST APIs. Features animated visual indicators and a fully responsive interface.</p>
+                <div class="project-actions">
+                  <a href="https://github.com/singampallimanohar/" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+                  <a href="#" class="btn-live">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" data-category="web">
+          <img src="https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=700&auto=format&fit=crop" alt="Task Management System" loading="lazy" class="project-img">
+          <div class="project-glass-overlay">
+            <div class="project-content-bottom">
+              <h3 class="project-card-title">Task Management System</h3>
+              <div class="project-tech-tags">
+                <span class="tag-django">Django</span>
+                <span class="tag-python">Python</span>
+                <span class="tag-db">SQL</span>
+              </div>
+              <div class="project-hover-reveal">
+                <p class="project-desc">A complete team organizer with task assignments, deadline tracking, status tagging, and role-based authorization.</p>
+                <div class="project-actions">
+                  <a href="https://github.com/singampallimanohar/" target="_blank" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+                  <a href="#" class="btn-live">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
       </div>
     </div>
   </section>
@@ -657,7 +664,7 @@
         <div class="service-card hover-lift">
           <div class="service-glow-edge"></div>
           <div class="service-icon"><svg viewBox="0 0 24 24" style="width: 1em; height: 1em; fill: currentColor; vertical-align: -0.125em;"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.357zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></svg></div>
-          <h3>Flutter App Development</h3>
+          <h3>App Development</h3>
           <p>Robust, cross-platform Android and iOS mobile applications built with responsive material controls and native state managers.</p>
         </div>
 
@@ -735,41 +742,50 @@
           </div>
         </div>
         
-        <!-- Form -->
-        <div class="contact-form-container reveal">
-          <form class="contact-form glass-card" id="contact-form" novalidate>
-            <h3>Send a Message</h3>
-            
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required placeholder="John Doe">
-                <span class="error-msg">Name is required.</span>
-              </div>
-              
-              <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required placeholder="john@example.com">
-                <span class="error-msg">Please enter a valid email.</span>
-              </div>
-            </div>
-            
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required placeholder="Project Proposal / Job Opportunity">
-              <span class="error-msg">Subject is required.</span>
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required placeholder="Hi Manohar, I would love to talk about..."></textarea>
-              <span class="error-msg">Message cannot be empty.</span>
-            </div>
-            
-            <button type="submit" class="btn btn-primary btn-full magnetic" id="btn-submit">
-              <i class="fas fa-paper-plane"></i> Send Message
-            </button>
-          </form>
+        <form
+    class="contact-form glass-card"
+    action="https://formsubmit.co/singampallimanohar6@gmail.com"
+    method="POST">
+
+    <!-- Hidden Fields -->
+    <input type="hidden" name="_subject" value="📩 New Portfolio Contact Form">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://singampallimanohar.netlify.app">
+
+    <h3>Send a Message</h3>
+
+    <div class="form-row">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="Name" required placeholder="John Doe">
+            <span class="error-msg">Name is required.</span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="Email" required placeholder="john@example.com">
+            <span class="error-msg">Please enter a valid email.</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="Subject" required placeholder="Project Proposal / Job Opportunity">
+        <span class="error-msg">Subject is required.</span>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="Message" rows="5" required placeholder="Hi Manohar, I would love to talk about..."></textarea>
+        <span class="error-msg">Message cannot be empty.</span>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-full magnetic">
+        <i class="fas fa-paper-plane"></i> Send Message
+    </button>
+
+</form>
           
           <!-- Success Feedback Overlay -->
           <div class="form-success-overlay" id="form-success">
@@ -787,41 +803,80 @@
 
   <!-- 11. Footer -->
   <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-brand">
-        <a href="#home" class="footer-logo">Manohar Singampalli</a>
-        <p>Full Stack & Flutter Developer</p>
-        <div class="footer-social-links">
-          <a href="https://www.linkedin.com/in/singampallimanohar" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/singampallimanohar/" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="mailto:singampallimanohar6@gmail.com"><i class="fas fa-envelope"></i></a>
+    <div class="footer-top-accent"></div>
+
+    <div class="container footer-main">
+
+      <!-- Brand Column -->
+      <div class="footer-col footer-brand-col">
+        <a href="#home" class="footer-logo-link">
+          <img src="image/logo.png" alt="Manohar Singampalli" class="footer-logo-img">
+          <div class="footer-brand-text">
+            <span class="footer-brand-name">Manohar Singampalli</span>
+            <span class="footer-brand-role">Full Stack &amp; Flutter Developer</span>
+          </div>
+        </a>
+        <p class="footer-tagline">Turning ideas into elegant digital experiences — one line of code at a time.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/singampallimanohar" target="_blank" class="footer-social-btn linkedin" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/singampallimanohar/" target="_blank" class="footer-social-btn github" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:singampallimanohar6@gmail.com" class="footer-social-btn email" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/918019923533" target="_blank" class="footer-social-btn whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
       </div>
-      
-      <div class="footer-nav">
-        <h4>Quick Links</h4>
-        <ul>
+
+      <!-- Quick Links Column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-      
-      <div class="footer-info">
-        <h4>Contact Info</h4>
-        <p><i class="fas fa-envelope"></i> singampallimanohar6@gmail.com</p>
-        <p><i class="fas fa-phone-alt"></i> +91 8019923533</p>
-        <p><i class="fas fa-map-marker-alt"></i> Andhra Pradesh, India</p>
+
+      <!-- Contact Info Column -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Contact</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <i class="fas fa-envelope footer-contact-ico"></i>
+            <a href="mailto:singampallimanohar6@gmail.com">singampallimanohar6@gmail.com</a>
+          </li>
+          <li>
+            <i class="fas fa-phone-alt footer-contact-ico"></i>
+            <a href="tel:+918019923533">+91 8019923533</a>
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt footer-contact-ico"></i>
+            <span>Andhra Pradesh, India</span>
+          </li>
+        </ul>
+        <div class="footer-availability">
+          <span class="avail-dot"></span>
+          Available for freelance projects
+        </div>
       </div>
+
     </div>
-    
+
+    <!-- Bottom Bar -->
     <div class="footer-bottom">
       <div class="container footer-bottom-layout">
-        <p>&copy; 2026 Manohar Singampalli. All rights reserved.</p>
-        <p>Built with <i class="fas fa-heart" style="color: #ef4444;"></i> &amp; Vanilla technologies</p>
+        <p class="footer-copyright">&copy; 2026 Manohar Singampalli. All rights reserved.</p>
+        <p class="footer-made-with">Crafted with <span class="footer-heart"><i class="fas fa-heart"></i></span> &amp; Vanilla Web Technologies</p>
       </div>
     </div>
   </footer>

@@ -635,10 +635,10 @@ document.querySelectorAll('.skills-grid').forEach(el => skillBarObserver.observe
    19. CONTACT FORM VALIDATION & SUBMIT
    -------------------------------------------------------------------------- */
 (function initContactForm() {
-  const form        = document.getElementById('contact-form');
-  const successEl   = document.getElementById('form-success');
-  const closeBtn    = document.getElementById('btn-close-success');
-  const submitBtn   = document.getElementById('btn-submit');
+  const form      = document.getElementById('contact-form');
+  const successEl = document.getElementById('form-success');
+  const closeBtn  = document.getElementById('btn-close-success');
+  const submitBtn = document.getElementById('btn-submit');
 
   if (!form) return;
 
@@ -646,14 +646,12 @@ document.querySelectorAll('.skills-grid').forEach(el => skillBarObserver.observe
   function validateField(input) {
     const group = input.closest('.form-group');
     if (!group) return true;
-
     let valid = true;
     if (input.required && !input.value.trim()) valid = false;
     if (input.type === 'email') {
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!re.test(input.value)) valid = false;
     }
-
     group.classList.toggle('invalid', !valid);
     return valid;
   }
@@ -663,37 +661,61 @@ document.querySelectorAll('.skills-grid').forEach(el => skillBarObserver.observe
     input.addEventListener('blur',  () => validateField(input));
   });
 
-  // Form submit
-  form.addEventListener('submit', e => {
+  // Form submit — real POST via fetch to FormSubmit.co
+  form.addEventListener('submit', async e => {
     e.preventDefault();
 
+    // Validate all fields first
     let allValid = true;
     form.querySelectorAll('input[required], textarea[required]').forEach(input => {
       if (!validateField(input)) allValid = false;
     });
-
     if (!allValid) return;
 
-    // Simulate submission
-    submitBtn.disabled    = true;
-    submitBtn.innerHTML   = '<i class="fas fa-spinner fa-spin"></i> Sending…';
+    // Loading state
+    submitBtn.disabled  = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
 
-    setTimeout(() => {
+    // Build form data as JSON for FormSubmit AJAX mode
+    const data = {
+      Name:    form.querySelector('#name').value.trim(),
+      Email:   form.querySelector('#email').value.trim(),
+      Subject: form.querySelector('#subject').value.trim(),
+      Message: form.querySelector('#message').value.trim(),
+      _subject: '📩 New Portfolio Contact — ' + form.querySelector('#subject').value.trim(),
+      _captcha: 'false',
+      _template: 'table',
+    };
+
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/singampallimanohar6@gmail.com', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body:    JSON.stringify(data),
+      });
+
+      const json = await res.json();
+
+      if (json.success === 'true' || json.success === true) {
+        // Success — show overlay, reset form
+        form.reset();
+        form.querySelectorAll('.form-group').forEach(g => g.classList.remove('invalid'));
+        if (successEl) successEl.classList.add('active');
+      } else {
+        throw new Error('FormSubmit returned failure');
+      }
+    } catch (err) {
+      alert('⚠️ Something went wrong. Please email me directly at singampallimanohar6@gmail.com');
+      console.error('FormSubmit error:', err);
+    } finally {
       submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
       submitBtn.disabled  = false;
-      form.reset();
-      // Remove validation states
-      form.querySelectorAll('.form-group').forEach(g => g.classList.remove('invalid'));
-      // Show success overlay
-      if (successEl) successEl.classList.add('active');
-    }, 1800);
+    }
   });
 
   // Close success overlay
   if (closeBtn && successEl) {
-    closeBtn.addEventListener('click', () => {
-      successEl.classList.remove('active');
-    });
+    closeBtn.addEventListener('click', () => successEl.classList.remove('active'));
   }
 })();
 
