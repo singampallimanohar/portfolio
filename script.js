@@ -416,11 +416,10 @@ const revealObserver = new IntersectionObserver((entries) => {
   if (!el) return;
 
   const phrases = [
-    'Full Stack Developer',
-    'Flutter Developer',
-    'AI & ML Enthusiast',
-    'Django Backend Dev',
-    'Open to Work 🚀'
+    'Full Stack Web Developer',
+    'PHP Developer',
+    'JavaScript Developer',
+    'UI/UX Enthusiast'
   ];
 
   let phraseIndex = 0;
